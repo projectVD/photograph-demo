@@ -8,13 +8,12 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: #161611;
   color: #fff;
-  height: 100vh;
   cursor: none;
 }
 
 .cursor {
   pointer-events: none;
-  position: fixed;
+  position: absolute;
   padding: 0.4rem;
   background-color: #fff;
   border-radius: 50%;
@@ -46,8 +45,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  perspective: 3000px;
-  perspective-origin: top right;
 }
 .content img {
   width: auto;
@@ -57,10 +54,8 @@ nav {
   margin-left: 150px;
   transition: all 0.5s ease;
 }
-.content img:hover {
-  transform: rotateX(35deg);
-  transition: transform 0.5s ease;
-}
+
+
 .content__text {
   flex: 1;
   padding-left: 150px;
@@ -79,4 +74,32 @@ nav {
   font-size: 1rem;
   cursor: none;
   margin-top: 50px;
+}
+
+
+.conatiner { 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 120px 0;
+  color: #161611;
+}
+
+.card {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.card-item {
+  background-color: #fff;
+  width: 250px;
+  height: 250px;
+  transition: transform 0.2s;
+  overflow: hidden;
+}
+
+.card-item img {
+  width: inherit;
+  height: initial;
+  object-fit: contain;
 }
